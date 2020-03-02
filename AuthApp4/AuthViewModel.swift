@@ -9,6 +9,21 @@
 import Foundation
 import UIKit
 struct AuthViewModel {
+    func makeUserAndGroup(userName: String?, password: String?) -> (User, UserGroup)? {
+          guard let user = getUserUsingCredentials(username: userName, password: password),
+          let data = getData(),
+          let group = makeGroupFromData(data) else { return nil }
+          return (user, group)
+      }
+
+    func getUserUsingCredentials(username: String?, password: String?) -> User? {
+        guard let user = username,
+            let pass = password,
+            let data = getData() else { return nil }
+        let group = makeGroupFromData(data)
+        return getUserIfExists(group, username: user, password: pass)
+    }
+
     func getData() -> Data? {
         do {
             guard let path = Bundle.main.path(forResource: "userlist", ofType: "json"),
@@ -30,33 +45,18 @@ struct AuthViewModel {
         }
     }
 
-    func makeUserAndGroup(userName: String?, password: String?) -> (User, UserGroup)? {
-          guard let user = getUserUsingCredentials(username: userName, password: password),
-          let data = getData(),
-          let group = makeGroupFromData(data) else { return nil }
-          return (user, group)
-      }
-
-    func getUserUsingCredentials(username: String?, password: String?) -> User? {
-        guard let user = username,
-            let pass = password,
-            let data = getData() else { return nil }
-        let group = makeGroupFromData(data)
-        return getUserIfExists(group, username: user, password: pass)
-    }
-
-    func getUserIfExists(_ userGroup: UserGroup?, username: String, password: String) -> User? {
-        guard let group = userGroup else { return nil }
-        let user = group.users.first {
-            $0.username == username &&
-            $0.password == password
-        }
-        return user
-    }
-
     func isValidUser(user: User, group: UserGroup) -> Bool {
         return getUserIfExists(group, username: user.username, password: user.password) != nil ? true : false
     }
+
+    func getUserIfExists(_ userGroup: UserGroup?, username: String, password: String) -> User? {
+         guard let group = userGroup else { return nil }
+         let user = group.users.first {
+             $0.username == username &&
+             $0.password == password
+         }
+         return user
+     }
 
     func setButtonState(_ button: UIButton, isEnabled: Bool) {
          if isEnabled {
