@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		6E34FF44240C2898006C7B69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34FF43240C2898006C7B69 /* AppDelegate.swift */; };
 		6E34FF46240C2898006C7B69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34FF45240C2898006C7B69 /* SceneDelegate.swift */; };
-		6E34FF48240C2899006C7B69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34FF47240C2898006C7B69 /* ViewController.swift */; };
+		6E34FF48240C2899006C7B69 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34FF47240C2898006C7B69 /* AuthView.swift */; };
 		6E34FF4B240C2899006C7B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E34FF49240C2899006C7B69 /* Main.storyboard */; };
 		6E34FF4D240C2899006C7B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E34FF4C240C2899006C7B69 /* Assets.xcassets */; };
 		6E34FF50240C2899006C7B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E34FF4E240C2899006C7B69 /* LaunchScreen.storyboard */; };
+		6E34FF58240C28DE006C7B69 /* userlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E34FF57240C28DE006C7B69 /* userlist.json */; };
+		6E34FF5A240C294A006C7B69 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34FF59240C294A006C7B69 /* User.swift */; };
+		6E34FF5C240C2951006C7B69 /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34FF5B240C2951006C7B69 /* UserGroup.swift */; };
+		6E34FF5E240C295D006C7B69 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34FF5D240C295D006C7B69 /* AuthViewModel.swift */; };
+		6E34FF60240C2966006C7B69 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34FF5F240C2966006C7B69 /* FieldValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E34FF40240C2898006C7B69 /* AuthApp4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthApp4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E34FF43240C2898006C7B69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E34FF45240C2898006C7B69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E34FF47240C2898006C7B69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E34FF47240C2898006C7B69 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		6E34FF4A240C2899006C7B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E34FF4C240C2899006C7B69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E34FF4F240C2899006C7B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E34FF51240C2899006C7B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E34FF57240C28DE006C7B69 /* userlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userlist.json; sourceTree = "<group>"; };
+		6E34FF59240C294A006C7B69 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6E34FF5B240C2951006C7B69 /* UserGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroup.swift; sourceTree = "<group>"; };
+		6E34FF5D240C295D006C7B69 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		6E34FF5F240C2966006C7B69 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +66,14 @@
 		6E34FF42240C2898006C7B69 /* AuthApp4 */ = {
 			isa = PBXGroup;
 			children = (
+				6E34FF57240C28DE006C7B69 /* userlist.json */,
+				6E34FF59240C294A006C7B69 /* User.swift */,
+				6E34FF5B240C2951006C7B69 /* UserGroup.swift */,
+				6E34FF5D240C295D006C7B69 /* AuthViewModel.swift */,
+				6E34FF5F240C2966006C7B69 /* FieldValidator.swift */,
 				6E34FF43240C2898006C7B69 /* AppDelegate.swift */,
 				6E34FF45240C2898006C7B69 /* SceneDelegate.swift */,
-				6E34FF47240C2898006C7B69 /* ViewController.swift */,
+				6E34FF47240C2898006C7B69 /* AuthView.swift */,
 				6E34FF49240C2899006C7B69 /* Main.storyboard */,
 				6E34FF4C240C2899006C7B69 /* Assets.xcassets */,
 				6E34FF4E240C2899006C7B69 /* LaunchScreen.storyboard */,
@@ -125,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E34FF58240C28DE006C7B69 /* userlist.json in Resources */,
 				6E34FF50240C2899006C7B69 /* LaunchScreen.storyboard in Resources */,
 				6E34FF4D240C2899006C7B69 /* Assets.xcassets in Resources */,
 				6E34FF4B240C2899006C7B69 /* Main.storyboard in Resources */,
@@ -138,8 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E34FF48240C2899006C7B69 /* ViewController.swift in Sources */,
+				6E34FF5A240C294A006C7B69 /* User.swift in Sources */,
+				6E34FF48240C2899006C7B69 /* AuthView.swift in Sources */,
+				6E34FF5E240C295D006C7B69 /* AuthViewModel.swift in Sources */,
 				6E34FF44240C2898006C7B69 /* AppDelegate.swift in Sources */,
+				6E34FF60240C2966006C7B69 /* FieldValidator.swift in Sources */,
+				6E34FF5C240C2951006C7B69 /* UserGroup.swift in Sources */,
 				6E34FF46240C2898006C7B69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
